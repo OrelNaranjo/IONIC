@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Agregar Producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Agregar Producto</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-button expand="full" routerLink="/store" class="ion-margin-top">Volver a la Tienda</ion-button>
+
+  <ion-item class="ion-margin-top">
+    <ion-label id="name" position="floating">Nombre</ion-label>
+    <ion-input aria-labelledby="name" [(ngModel)]="newProduct.name"></ion-input>
+  </ion-item>
+  <ion-item class="ion-margin-top">
+    <ion-label id="desc" position="floating">Descripción</ion-label>
+    <ion-textarea aria-labelledby="desc" [(ngModel)]="newProduct.desc"></ion-textarea>
+  </ion-item>
+  <ion-item class="ion-margin-top">
+    <ion-label id="price" position="floating">Precio</ion-label>
+    <ion-input aria-labelledby="price" type="number" [(ngModel)]="newProduct.price"></ion-input>
+  </ion-item>
+  <ion-item class="ion-margin-top">
+    <ion-label id="image" position="floating">Imagen URL</ion-label>
+    <ion-input aria-labelledby="image" [(ngModel)]="newProduct.image"></ion-input>
+  </ion-item>
+  <ion-item class="ion-margin-top">
+    <ion-label id="dcto" position="floating">Descuento (%)</ion-label>
+    <ion-input aria-labelledby="dcto" type="number" [(ngModel)]="newProduct.dcto"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="addProduct()" class="ion-margin-top">Agregar Producto</ion-button>
+</ion-content>
